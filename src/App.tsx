@@ -7,7 +7,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Dashboard from "./pages/Dashboard";
 import Transactions from "./pages/Transactions";
+import Income from "./pages/Income";
+import Expenses from "./pages/Expenses";
+import Investments from "./pages/Investments";
 import Goals from "./pages/Goals";
+import Analytics from "./pages/Analytics";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,12 +27,12 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/transactions" element={<Transactions />} />
-            <Route path="/income" element={<div className="p-8 text-center text-muted-foreground">Página de Receitas em desenvolvimento</div>} />
-            <Route path="/expenses" element={<div className="p-8 text-center text-muted-foreground">Página de Gastos em desenvolvimento</div>} />
-            <Route path="/investments" element={<div className="p-8 text-center text-muted-foreground">Página de Investimentos em desenvolvimento</div>} />
+            <Route path="/income" element={<Income />} />
+            <Route path="/expenses" element={<Expenses />} />
+            <Route path="/investments" element={<Investments />} />
             <Route path="/goals" element={<Goals />} />
-            <Route path="/analytics" element={<div className="p-8 text-center text-muted-foreground">Página de Analytics em desenvolvimento</div>} />
-            <Route path="/settings" element={<div className="p-8 text-center text-muted-foreground">Página de Configurações em desenvolvimento</div>} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/settings" element={<Settings />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
